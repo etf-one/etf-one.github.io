@@ -1,135 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Site Properties -->
+  <title>ETF ONE</title>
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/site.css">
 
-  <title>ETF One</title>
-  <meta name="description" content="The Crypto ETF in digital Currency world.">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/menu.css">
 
-  <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/">
-  <link rel="alternate" type="application/rss+xml" title="ETF One" href="/feed.xml">
-  
-  
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/transition.css">
+
+  <style type="text/css">
+
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
 
 
-  <body>
+  </style>
 
-    <header class="site-header" role="banner">
+  <script src="assets/library/jquery.min.js"></script>
+  <script src="semantic/dist/components/visibility.js"></script>
+  <script src="semantic/dist/components/sidebar.js"></script>
+  <script src="semantic/dist/components/transition.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
 
-  <div class="wrapper">
-    
-    
-    <a class="site-title" href="/">ETF One</a>
-  
-    
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
 
-        <div class="trigger">
-          
-            
-            
-          
-            
-            
-            <a class="page-link" href="/about/">About</a>
-            
-          
-            
-            
-          
-            
-            
-          
-        </div>
-      </nav>
-    
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</head>
+<body>
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a class="active item">Home</a>
+    <a class="item">Work</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
+      </div>
+    </div>
   </div>
-</header>
-
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-  
-  
-
-
-  <ul class="post-list">
-    
-      <li>
-        
-        <span class="post-meta">Sep 1, 2017</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2017/09/01/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
 </div>
 
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="active item">Home</a>
+  <a class="item">Work</a>
+  <a class="item">Company</a>
+  <a class="item">Careers</a>
+  <a class="item">Login</a>
+  <a class="item">Signup</a>
+</div>
+
+
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <a class="active item">Home</a>
+        <a class="item">Work</a>
+        <a class="item">Company</a>
+        <a class="item">Careers</a>
+        <div class="right item">
+          <a class="ui inverted button">Log in</a>
+          <a class="ui inverted button">Sign Up</a>
+        </div>
       </div>
-    </main>
+    </div>
 
-    <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">ETF One</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            
-              ETF One
-            
-            </li>
-            
-            <li><a href="mailto:kidylee@gmail.com">kidylee@gmail.com</a></li>
-            
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          
-
-          
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>The Crypto ETF in digital Currency world.
-</p>
-      </div>
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        ETF ONE
+      </h1>
+      <h2>The Exchang-Traded Fund in Crypo Currency World.</h2>
+      <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
     </div>
 
   </div>
 
-</footer>
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="eight wide column">
+          <h3 class="ui header">Beat the cryptocurrency market</h3>
+          <p>The cryptocurrency market has increased to billion level, we don't want miss any opportunity any more. A ETF, which tracing the market index, is the best way to maximium your investment.</p>
+          <h3 class="ui header">The best arbitrage trading opportunity</h3>
+          <p>Move Bitcoin/Ether across multiple exchanges to get the profit of price different? An ETF will be the best way to get this kind of profit within a signle exchange.</p>
+        </div>
+        <div class="six wide right floated column">
+          <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="center aligned column">
+          <a class="ui huge button">Check It Out</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-  </body>
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Sitemap</a>
+            <a href="#" class="item">Contact Us</a>
+            <a href="#" class="item">Religious Ceremonies</a>
+            <a href="#" class="item">Gazebo Plans</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Services</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">FAQ</a>
+            <a href="#" class="item">How To Access</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Recent Updates</h4>
+          <p>ETF One start from today.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
 
 </html>
